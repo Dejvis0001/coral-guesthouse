@@ -1,4 +1,4 @@
-//This is the transmition/animation
+//Moving Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -45,3 +45,18 @@ const observer5 = new IntersectionObserver((entries5) => {
 const hiddenElements5 = document.querySelectorAll(".hidden5");
 hiddenElements5.forEach((el5) => observer5.observe(el5));
 //The End 
+//Home-Slider
+var swiper = new Swiper(".home-slider", {
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+  },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+});
+//The End

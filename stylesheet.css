@@ -40,7 +40,7 @@ header .navbar {background-color: rgba(83, 104, 126, 0.9);}
 header .navbar .navbar-nav li .nav-link {
     display: block;
     width: fit-content;
-    color: #000000;
+    color: #ffffff;
     font-weight: 700;
     border: none;
 }
@@ -157,11 +157,9 @@ height: 5rem;width: 5rem;line-height: 5rem;background: var(--white);color: var(-
 }
 /*Facilities*/
 #facilitys {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(assets/image/background1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-}
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(assets/image/background1.jpg);
+    background-size: cover;background-position: center;background-blend-mode: multiply;color: white;}
+    
 .facility-box {
     border-right: 1px solid rgb(150, 148, 148);
     border-right-style: double;
@@ -332,13 +330,13 @@ color: #ffb400;}
     font-weight: 800;
     line-height: 150%;
     font-family: "Cormorant", serif;
-    font-size: 40px;
+    font-size: 100px;
     text-align: center;}
 /*Rooms*/
-.room-bg {background-color: #FFF6ED;padding: 3rem 0;}
+.room-bg {background-color: #F4F2F2;padding: 3rem 0;}
 .rooms h2 {color: #978459;font-weight: 600;}
 .rooms .col-md-5 {overflow: hidden;}
-.rooms img {height: 35vh;transition: .2s ease-in-out;}
+.rooms img {transition: .2s ease-in-out;}
 .rooms img:hover {transform: scale(1.1);filter: brightness(110%);}
 .roomicon {height: 40px !important;}
 .rooms ul {list-style: none;padding: 0;}
@@ -377,7 +375,7 @@ color: #ffb400;}
 .contact section:hover i {color: #fff;text-decoration: none;}
 .contact section a {text-decoration: none;color: inherit;border-bottom: 1px solid transparent;transition: .1s;font-size: 22px;}
 .contact section a:hover {border-color: #000000;text-decoration: none;}
-.google-maps iframe {width: 100%;height: 40vh;border: none;}
+.google-maps iframe {width: 100%;height: 25vh;border: none;}
 /*Footer*/
 .footer_wrapper {background: #000000 !important;padding: 5% 0 0 0 !important;}
 .ft-text {text-decoration: none;color: white;padding-bottom: 5px !important;font-weight: 600 !important;}
@@ -399,6 +397,10 @@ color: #ffb400;}
 .gold-head {color: var(--gold); font-family:var(--style-font);}
 .img-fluid {box-shadow: 8px 8px 4px var(--gold);border-radius: 10px;}
 .general-title {font-family: "the season", serif;font-size: 40px;color: #D36A35;text-align: center;}
+.footer-ul{text-align: center;}
+.footer-link-d{text-align: center;}
+#headbutton{color: white !important;border: 1px solid #ffffff !important;}
+#headbutton:hover{color: #e08b57 !important; border: 1px solid #e08b57 !important;}
 /*Animation*/
 .hidden {transform: scale(0);transition: .4s ease-in;}/*Makes them dissepaer*/
 .show {transform: scale(1);}
@@ -447,6 +449,38 @@ button {
     opacity: 0.3;}
 .link-btn:hover:before {right: 105%;background: #ffffff;}
 .container .link-btn, .link-btn{border-radius: 10px;}
+/*Button2*/
+.button2 {
+    padding: 0.8em 1.8em;
+    border: 2px solid #5f7286;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #5f7286;}
+.button2::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #5f7286;
+    transition: .5s ease;
+    display: block;
+    z-index: -1}
+.button2:hover::before {width: 105%;}
+.button2:hover {color: #ffffff;}
+.features {display: flex;justify-content: center;}
+.feature-icons {display: flex;flex-wrap: nowrap;}
+.icon {display: flex;flex-direction: column;align-items: center;margin-right: 30px;text-align: center;}
+.imgroom{display: flex;justify-content: center;height: 40vh;width: auto;}
 /*Media*/
 @media only screen and (max-width: 1200px) {.home-gallery section {filter: saturate(1) !important;}::-webkit-scrollbar {width: 7px;}}
 @media only screen and (min-width: 992px) {header .navbar {margin: 0;margin-left: auto;}}
@@ -482,46 +516,12 @@ button {
     .options {display: grid;}
     .gallery_product {display: grid;justify-content: center;}
     .footer-link-d,ul.list-unstyled li,ul.p-0.footer-ul li {text-align: center;}}
+    @media (max-width: 992px) {
+        .cont{text-align: center;}
+        .imgroom{height: 50vh !important;}
+        .features{justify-content: center;}
+        .hmt4{font-size: 30px;}
+    }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {.section-heading h2 {font-size: 36px;}}
 @media only screen and (min-width: 768px) and (max-width: 991px) {.section-heading h2 {font-size: 30px;}}
-
-
-/*Button2*/
-.button2 {
-    padding: 0.8em 1.8em;
-    border: 2px solid #5f7286;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #5f7286;
-   }
-   
-   .button2::before {
-    content: '';
-    width: 0;
-    height: 300%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background: #5f7286;
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-   }
-   
-   .button2:hover::before {
-    width: 105%;
-   }
-   
-   .button2:hover {
-    color: #ffffff;
-   }
-   
